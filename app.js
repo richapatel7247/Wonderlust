@@ -47,14 +47,14 @@ app.use(express.static(path.join(__dirname, "public")));
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     crypto: {
-        secret: process.SECRET,
+        secret: process.SECRETE,
     },
     touchAfter: 24 * 3600,
 });
 
 const sessionOption = {
     store,
-    secret : process.SECRET,
+    secret : process.SECRETE,
     resave : false,
     saveUninitialized : true,
     cookie : {
