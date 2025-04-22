@@ -2,8 +2,6 @@ if(process.env.NODE_ENV != "production") {
     require('dotenv').config();
 }
 
-// require("dotenv").config();
-
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -22,8 +20,6 @@ const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
-
-const mongo_URL = "mongodb://127.0.0.1:27017/wanderlust";
 const dbUrl = process.env.ATLAS_DB_URL;
 async function main() {
     mongoose.connect(dbUrl);
@@ -51,14 +47,14 @@ app.use(express.static(path.join(__dirname, "public")));
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     crypto: {
-        secret: 'swonderlust7247'
+        secret: process.SECRET,
     },
     touchAfter: 24 * 3600,
 });
 
 const sessionOption = {
     store,
-    secret : "mysupersecretcode",
+    secret : process.SECRET,
     resave : false,
     saveUninitialized : true,
     cookie : {
@@ -96,7 +92,6 @@ app.all("*", (req, res, err, next) => {
 app.use((err, req, res, next) => {
     let { statusCode = 500, message = "Something went wrong"} = err;
     res.status(statusCode).render("errors.ejs",{ message });
-    // res.status(statusCode).send(message);
 });
 
 app.listen(8080, () => {
