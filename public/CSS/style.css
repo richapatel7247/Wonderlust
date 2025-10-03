@@ -1,5 +1,5 @@
 .navbar {
-    height: 5rem;
+    height: 4rem;
     background-color: white;
 }
 
@@ -19,13 +19,15 @@ body {
 .fa-compass {
     font-size: 3rem;
     color: #fe424d;
+    
 }
 
 /* NAVBAR */
 
 .nav-link {
-    color: #222222 !important;
+    color:black !important;
 }
+
 
 .f-info-links a {
     text-decoration: none;
@@ -40,9 +42,11 @@ body {
     text-align: center;
     height: 8rem;
     display: flex;
-    background-color: rgb(231, 227, 227);
+    background-color: rgb(246, 245, 245);
+   
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 1px !important;
 }
 
 .f-info-social, 
@@ -92,18 +96,17 @@ body {
     opacity: 0.2;
     background-color: white;
 }
-
 /* NEW PAGE */
 
 .add-btn {
-    background-color: #fe424d !important;
+    background-color:  #fe424d !important ;
     color: white !important;
 }
 
 /* EDIT PAGE */
 
 .edit-btn {
-    background-color: #fe424d !important;
+    background-color:  #fe424d!important ;
     border: none !important;
 }
 

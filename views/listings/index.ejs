@@ -105,9 +105,9 @@
       </div>
     </div>
 
-    <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 mx-2 mt-2">
+    <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 mx-2 mt-2" >
         <% for(let listing of allListings) { %>
-          <a href="/listings/<%= listing._id %>" class="card-link">
+          <a href="/listings/<%= listing._id %>" class="card-link" >
             <div class="card col listing-card" style=" width: 15rem;">
               <img src="<%= listing.image.url %>" class="card-img-top" alt="..." style=" height: 16rem;">
               <div class="card-img-overlay"></div>

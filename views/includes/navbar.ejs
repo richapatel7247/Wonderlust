@@ -1,15 +1,18 @@
 
 <style>
+  .nav-link:hover {
+    color: red !important;
+  }
   .btn-search {
     background-color: #fe424d;
     color: white;
+    
     border-radius: 25px;
     padding: 0 1rem 0 1rem;
   }
   
   .btn-search:hover {
     background-color: #fe424d;
-    color: white;
   }
 
   .search-inp {
@@ -28,7 +31,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="/listings">Explore</a>
+          <a class="nav-link" href="/listings"><h3>Wonderlust</h3></a>
         </div>
 
         <div class="navbar-nav ms-auto">
@@ -41,7 +44,7 @@
         </div>
 
         <div class="navbar-nav ms-auto me-5">
-          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+          <a class="nav-link" href="/listings/new"> Wonderlust your home</a>
           <% if(!currUser) { %>
           <a class="nav-link"  href="/signup"> <b>Sign Up</b> </a>
           <a class="nav-link" href="/login"> <b> Log In</b> </a>
